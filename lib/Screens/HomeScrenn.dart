@@ -32,7 +32,73 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      drawer: const Drawer(),
+      drawer: Drawer(
+        backgroundColor: Colors.blue,
+        child: SafeArea(
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      width: 60,
+                      height: 60,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.amber,
+                      ),
+                    ),
+                  ),
+                  Text("Your own name account here"),
+                ],
+              ),
+              //
+              const Divider(
+                thickness: 1,
+                color: Colors.black,
+              ),
+              Container(
+                height: 300,
+                child: ListView(
+                  children: const [
+                    // ListTile(
+                    //   leading: Icon(Icons.schedule),
+                    //   title: Padding(
+                    //       padding: EdgeInsets.only(right: 40),
+                    //       child: Text("Scheduled Payment")),
+                    //   titleAlignment: ListTileTitleAlignment.threeLine,
+                    // ),
+                    Column(
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.schedule),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text("Scheduled Payment"),
+                          ],
+                        ),
+                        //
+                        Row(
+                          children: [
+                            Icon(Icons.cabin),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text("Checkbook"),
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
       body: Column(
         children: [
           Flexible(
